@@ -13,11 +13,15 @@ Hitori is played with a grid of squares or cells, with each cell initially conta
 
 We basically transform the problem into 3-SAT (well known NP-Complete problem) and then use a SAT solver called picosat to solve it.
 - For the first condition (no same number in the same row or column), we add a clause with pairs of variables and then a 0. For example, if the first row of the puzzle matrix is 
+
 355163 
 we are going to add the following clauses to avoid the 3 and 5 repetitions:
+
 1 6 0 
+
 2 3 0 
 - For the second condition (non adjacent black cells), if two blacks are adjacent, we add a clause to make one of them white. For instance in the previous example, we will have to add the following clause:
+
 -2 -3 0
 to avoid element 2 and 3 to be possitive at the same time.
 After we do that for the whole matrix, we call the SAT solver and if it is satisfiable, we print the matrix.
