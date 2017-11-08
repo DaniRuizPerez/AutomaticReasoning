@@ -1,7 +1,7 @@
 Hitori Puzzle Solver
 ============
 
-This Hitori Puzzle Solver is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It transforms the problem into a set of CNF boolean clauses and then calls a SAT solver and creates the solution.
+This Hitori Puzzle Solver is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It transforms the Hitori puzzle into a set of CNF boolean clauses based on the rules of the game, calls a SAT solver and creates the solution.
 
 
 ## Hitori puzzle
