@@ -1,7 +1,7 @@
 Predicate Calculus Theorem Proving (using Prover9)
 ============
 
-This theorem proving assignment is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It will check wether a conclussion follows from the premises using uses a theorem prover for Predicate Calculus called Prover9. This software accepts a list of formulas in First Order Logic and decides whether a formula is valid or not by refutation using resolution.
+This theorem proving assignment is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It will check whether a conclusion follows from the premises using uses a theorem prover for Predicate Calculus called Prover9. This software accepts a list of formulas in First Order Logic and decides whether a formula is valid or not by refutation using resolution.
 
 
 ## Example theorems to prove:
