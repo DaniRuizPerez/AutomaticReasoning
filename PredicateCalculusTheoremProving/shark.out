@@ -1,0 +1,154 @@
+============================== Prover9 ===============================
+Prover9 (32) version Oct-2007, Oct 2007.
+Process 2236 was started by UserLemar on Lemar-PC,
+Thu Mar  6 23:15:47 2014
+The command was "bin/prover9 -f shark".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+% Reading from file shark
+
+if(Prover9).
+% Conditional input included.
+assign(max_seconds,60).
+end_if.
+if(Mace4).
+% Conditional input omitted.
+end_if.
+
+formulas(assumptions).
+(all x (shark(x) -> -herb(x))).
+(exists x fish(x)).
+(all x all y (shark(x) & fish(y) -> eats(x,y))).
+(all x (fish(x) -> animal(x))).
+(all x all y (herb(x) & animal(y) -> -eats(x,y))).
+end_of_list.
+
+formulas(goals).
+(all x (shark(x) -> -herb(x))).
+end_of_list.
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 (all x (shark(x) -> -herb(x))) # label(non_clause).  [assumption].
+2 (exists x fish(x)) # label(non_clause).  [assumption].
+3 (all x all y (shark(x) & fish(y) -> eats(x,y))) # label(non_clause).  [assumption].
+4 (all x (fish(x) -> animal(x))) # label(non_clause).  [assumption].
+5 (all x all y (herb(x) & animal(y) -> -eats(x,y))) # label(non_clause).  [assumption].
+6 (all x (shark(x) -> -herb(x))) # label(non_clause) # label(goal).  [goal].
+
+============================== end of process non-clausal formulas ===
+
+============================== PROCESS INITIAL CLAUSES ===============
+
+% Clauses before input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+-shark(x) | -herb(x).  [clausify(1)].
+fish(c1).  [clausify(2)].
+-shark(x) | -fish(y) | eats(x,y).  [clausify(3)].
+-fish(x) | animal(x).  [clausify(4)].
+-herb(x) | -animal(y) | -eats(x,y).  [clausify(5)].
+shark(c2).  [deny(6)].
+herb(c2).  [deny(6)].
+end_of_list.
+
+formulas(demodulators).
+end_of_list.
+
+============================== PREDICATE ELIMINATION =================
+
+Eliminating shark/1
+7 shark(c2).  [deny(6)].
+8 -shark(x) | -herb(x).  [clausify(1)].
+9 -shark(x) | -fish(y) | eats(x,y).  [clausify(3)].
+Derived: -herb(c2).  [resolve(7,a,8,a)].
+Derived: -fish(x) | eats(c2,x).  [resolve(7,a,9,a)].
+
+Eliminating fish/1
+10 -fish(x) | animal(x).  [clausify(4)].
+11 fish(c1).  [clausify(2)].
+Derived: animal(c1).  [resolve(10,a,11,a)].
+12 -fish(x) | eats(c2,x).  [resolve(7,a,9,a)].
+Derived: eats(c2,c1).  [resolve(12,a,11,a)].
+
+Eliminating herb/1
+13 herb(c2).  [deny(6)].
+14 -herb(x) | -animal(y) | -eats(x,y).  [clausify(5)].
+Derived: -animal(x) | -eats(c2,x).  [resolve(13,a,14,a)].
+15 -herb(c2).  [resolve(7,a,8,a)].
+Derived: $F.  [resolve(15,a,13,a)].
+
+Eliminating animal/1
+16 -animal(x) | -eats(c2,x).  [resolve(13,a,14,a)].
+17 animal(c1).  [resolve(10,a,11,a)].
+
+Eliminating eats/2
+
+============================== end predicate elimination =============
+
+Auto_denials:  (no changes).
+
+Term ordering decisions:
+Predicate symbol precedence:  predicate_order([ ]).
+Function symbol precedence:  function_order([ ]).
+After inverse_order:  (no changes).
+Unfolding symbols: (none).
+
+Auto_inference settings:
+  % set(neg_binary_resolution).  % (HNE depth_diff=0)
+  % clear(ordered_res).  % (HNE depth_diff=0)
+  % set(ur_resolution).  % (HNE depth_diff=0)
+    % set(ur_resolution) -> set(pos_ur_resolution).
+    % set(ur_resolution) -> set(neg_ur_resolution).
+
+Auto_process settings:  (no changes).
+
+============================== PROOF =================================
+
+% Proof 1 at 0.05 (+ 0.00) seconds.
+% Length of proof is 7.
+% Level of proof is 3.
+% Maximum clause weight is 0.
+% Given clauses 0.
+
+1 (all x (shark(x) -> -herb(x))) # label(non_clause).  [assumption].
+6 (all x (shark(x) -> -herb(x))) # label(non_clause) # label(goal).  [goal].
+7 shark(c2).  [deny(6)].
+8 -shark(x) | -herb(x).  [clausify(1)].
+13 herb(c2).  [deny(6)].
+15 -herb(c2).  [resolve(7,a,8,a)].
+18 $F.  [resolve(15,a,13,a)].
+
+============================== end of proof ==========================
+
+============================== STATISTICS ============================
+
+Given=0. Generated=1. Kept=0. proofs=1.
+Usable=0. Sos=0. Demods=0. Limbo=0, Disabled=13. Hints=0.
+Weight_deleted=0. Literals_deleted=0.
+Forward_subsumed=0. Back_subsumed=0.
+Sos_limit_deleted=0. Sos_displaced=0. Sos_removed=0.
+New_demodulators=0 (0 lex), Back_demodulated=0. Back_unit_deleted=0.
+Demod_attempts=0. Demod_rewrites=0.
+Res_instance_prunes=0. Para_instance_prunes=0. Basic_paramod_prunes=0.
+Nonunit_fsub_feature_tests=0. Nonunit_bsub_feature_tests=0.
+Megabytes=0.01.
+User_CPU=0.05, System_CPU=0.00, Wall_clock=0.
+
+============================== end of statistics =====================
+
+============================== end of search =========================
+
+THEOREM PROVED
+
+Exiting with 1 proof.
+
+Process 2236 exit (max_proofs) Thu Mar  6 23:15:47 2014

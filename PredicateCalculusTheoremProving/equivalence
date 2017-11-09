@@ -1,0 +1,19 @@
+if(Prover9). % Options for Prover9
+  assign(max_seconds, 60).
+end_if.
+
+if(Mace4).   % Options for Mace4
+  assign(max_seconds, 60).
+end_if.
+
+formulas(assumptions).
+
+all x all y all z eq(x,y) & eq(y,z) -> eq(x,z).
+all x all y eq(x,y) -> eq(y,x).
+-eq(x,y) & (eq(x,z) | eq(y,z)).
+
+end_of_list.
+
+formulas(goals).
+
+end_of_list.

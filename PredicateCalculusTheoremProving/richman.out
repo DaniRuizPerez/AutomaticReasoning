@@ -1,0 +1,231 @@
+============================== Prover9 ===============================
+Prover9 (32) version Oct-2007, Oct 2007.
+Process 2820 was started by UserLemar on Lemar-PC,
+Thu Mar  6 23:14:34 2014
+The command was "bin/prover9 -f richman.txt".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+% Reading from file richman.txt
+
+if(Prover9).
+% Conditional input included.
+assign(max_seconds,60).
+end_if.
+if(Mace4).
+% Conditional input omitted.
+end_if.
+
+formulas(assumptions).
+(all x (-rich(x) & man(x) -> rich(father(x)))).
+(all x (man(x) -> man(father(x)))).
+(all x (man(x) -> (exists y father(x) = y))).
+(exists x man(x)).
+end_of_list.
+
+formulas(goals).
+(exists y (rich(y) & man(y) & rich(father(father(y))))).
+end_of_list.
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 (all x (-rich(x) & man(x) -> rich(father(x)))) # label(non_clause).  [assumption].
+2 (all x (man(x) -> man(father(x)))) # label(non_clause).  [assumption].
+3 (all x (man(x) -> (exists y father(x) = y))) # label(non_clause).  [assumption].
+4 (exists x man(x)) # label(non_clause).  [assumption].
+5 (exists y (rich(y) & man(y) & rich(father(father(y))))) # label(non_clause) # label(goal).  [goal].
+
+============================== end of process non-clausal formulas ===
+
+============================== PROCESS INITIAL CLAUSES ===============
+
+% Clauses before input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+rich(x) | -man(x) | rich(father(x)).  [clausify(1)].
+-man(x) | man(father(x)).  [clausify(2)].
+-man(x) | father(x) = f1(x).  [clausify(3)].
+man(c1).  [clausify(4)].
+-rich(x) | -man(x) | -rich(father(father(x))).  [deny(5)].
+end_of_list.
+
+formulas(demodulators).
+end_of_list.
+
+============================== PREDICATE ELIMINATION =================
+
+No predicates eliminated.
+
+============================== end predicate elimination =============
+
+Auto_denials:  (non-Horn, no changes).
+
+Term ordering decisions:
+Predicate symbol precedence:  predicate_order([ =, man, rich ]).
+Function symbol precedence:  function_order([ c1, father, f1 ]).
+After inverse_order:  (no changes).
+Unfolding symbols: (none).
+
+Auto_inference settings:
+  % set(paramodulation).  % (positive equality literals)
+    % set(paramodulation) -> set(back_demod).
+  % set(binary_resolution).  % (non-Horn)
+  % set(positive_inference). % (non-Horn)
+    % set(positive_inference) -> assign(literal_selection, max_negative).
+  % set(neg_ur_resolution).  % (non-Horn, less than 100 clauses)
+
+Auto_process settings:
+  % set(factor).  % (non-Horn)
+  % set(back_unit_deletion).  % (non-Horn)
+    % set(back_unit_deletion) -> set(unit_deletion).
+
+============================== end of process initial clauses ========
+
+============================== CLAUSES FOR SEARCH ====================
+
+% Clauses after input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+6 rich(x) | -man(x) | rich(father(x)).  [clausify(1)].
+7 -man(x) | man(father(x)).  [clausify(2)].
+9 -man(x) | f1(x) = father(x).  [copy(8),flip(b)].
+10 man(c1).  [clausify(4)].
+11 -rich(x) | -man(x) | -rich(father(father(x))).  [deny(5)].
+end_of_list.
+
+formulas(demodulators).
+end_of_list.
+
+============================== end of clauses for search =============
+
+============================== SEARCH ================================
+
+% Starting search at 0.01 seconds.
+
+given #1 (I,wt=7): 6 rich(x) | -man(x) | rich(father(x)).  [clausify(1)].
+
+given #2 (I,wt=5): 7 -man(x) | man(father(x)).  [clausify(2)].
+
+given #3 (I,wt=7): 9 -man(x) | f1(x) = father(x).  [copy(8),flip(b)].
+
+given #4 (I,wt=2): 10 man(c1).  [clausify(4)].
+
+given #5 (I,wt=8): 11 -rich(x) | -man(x) | -rich(father(father(x))).  [deny(5)].
+
+given #6 (A,wt=5): 12 f1(c1) = father(c1).  [resolve(10,a,9,a)].
+
+given #7 (T,wt=3): 13 man(father(c1)).  [resolve(10,a,7,a)].
+
+given #8 (T,wt=4): 16 man(father(father(c1))).  [resolve(13,a,7,a)].
+
+given #9 (T,wt=5): 14 rich(c1) | rich(father(c1)).  [resolve(10,a,6,b)].
+
+given #10 (T,wt=5): 19 man(father(father(father(c1)))).  [resolve(16,a,7,a)].
+
+given #11 (A,wt=7): 15 f1(father(c1)) = father(father(c1)).  [resolve(13,a,9,a)].
+
+given #12 (T,wt=6): 22 man(father(father(father(father(c1))))).  [resolve(19,a,7,a)].
+
+given #13 (T,wt=7): 17 rich(father(c1)) | rich(father(father(c1))).  [resolve(13,a,6,b)].
+
+given #14 (T,wt=5): 27 rich(father(c1)) | -rich(c1).  [resolve(17,b,11,c),unit_del(c,10)].
+
+given #15 (T,wt=7): 25 man(father(father(father(father(father(c1)))))).  [resolve(22,a,7,a)].
+
+given #16 (A,wt=9): 18 f1(father(father(c1))) = father(father(father(c1))).  [resolve(16,a,9,a)].
+
+given #17 (T,wt=8): 29 man(father(father(father(father(father(father(c1))))))).  [resolve(25,a,7,a)].
+
+given #18 (T,wt=9): 20 rich(father(father(c1))) | rich(father(father(father(c1)))).  [resolve(16,a,6,b)].
+
+given #19 (T,wt=7): 34 rich(father(father(c1))) | -rich(father(c1)).  [resolve(20,b,11,c),unit_del(c,13)].
+
+given #20 (T,wt=6): 35 rich(father(father(c1))) | rich(c1).  [resolve(34,b,14,b)].
+
+given #21 (A,wt=11): 21 f1(father(father(father(c1)))) = father(father(father(father(c1)))).  [resolve(19,a,9,a)].
+
+given #22 (T,wt=9): 32 man(father(father(father(father(father(father(father(c1)))))))).  [resolve(29,a,7,a)].
+
+given #23 (T,wt=10): 37 man(father(father(father(father(father(father(father(father(c1))))))))).  [resolve(32,a,7,a)].
+
+given #24 (T,wt=11): 23 rich(father(father(father(c1)))) | rich(father(father(father(father(c1))))).  [resolve(19,a,6,b)].
+
+given #25 (T,wt=9): 42 rich(father(father(father(c1)))) | -rich(father(father(c1))).  [resolve(23,b,11,c),unit_del(c,16)].
+
+given #26 (A,wt=13): 24 f1(father(father(father(father(c1))))) = father(father(father(father(father(c1))))).  [resolve(22,a,9,a)].
+
+given #27 (T,wt=7): 43 rich(father(father(father(c1)))) | rich(c1).  [resolve(42,b,35,a)].
+
+given #28 (T,wt=5): 45 rich(c1) | -rich(father(c1)).  [resolve(43,a,11,c),unit_del(c,13)].
+
+given #29 (T,wt=2): 46 rich(c1).  [resolve(45,b,14,b),merge(b)].
+
+============================== PROOF =================================
+
+% Proof 1 at 0.01 (+ 0.01) seconds.
+% Length of proof is 25.
+% Level of proof is 12.
+% Maximum clause weight is 11.
+% Given clauses 29.
+
+1 (all x (-rich(x) & man(x) -> rich(father(x)))) # label(non_clause).  [assumption].
+2 (all x (man(x) -> man(father(x)))) # label(non_clause).  [assumption].
+4 (exists x man(x)) # label(non_clause).  [assumption].
+5 (exists y (rich(y) & man(y) & rich(father(father(y))))) # label(non_clause) # label(goal).  [goal].
+6 rich(x) | -man(x) | rich(father(x)).  [clausify(1)].
+7 -man(x) | man(father(x)).  [clausify(2)].
+10 man(c1).  [clausify(4)].
+11 -rich(x) | -man(x) | -rich(father(father(x))).  [deny(5)].
+13 man(father(c1)).  [resolve(10,a,7,a)].
+14 rich(c1) | rich(father(c1)).  [resolve(10,a,6,b)].
+16 man(father(father(c1))).  [resolve(13,a,7,a)].
+17 rich(father(c1)) | rich(father(father(c1))).  [resolve(13,a,6,b)].
+19 man(father(father(father(c1)))).  [resolve(16,a,7,a)].
+20 rich(father(father(c1))) | rich(father(father(father(c1)))).  [resolve(16,a,6,b)].
+23 rich(father(father(father(c1)))) | rich(father(father(father(father(c1))))).  [resolve(19,a,6,b)].
+27 rich(father(c1)) | -rich(c1).  [resolve(17,b,11,c),unit_del(c,10)].
+34 rich(father(father(c1))) | -rich(father(c1)).  [resolve(20,b,11,c),unit_del(c,13)].
+35 rich(father(father(c1))) | rich(c1).  [resolve(34,b,14,b)].
+42 rich(father(father(father(c1)))) | -rich(father(father(c1))).  [resolve(23,b,11,c),unit_del(c,16)].
+43 rich(father(father(father(c1)))) | rich(c1).  [resolve(42,b,35,a)].
+45 rich(c1) | -rich(father(c1)).  [resolve(43,a,11,c),unit_del(c,13)].
+46 rich(c1).  [resolve(45,b,14,b),merge(b)].
+47 rich(father(c1)).  [back_unit_del(27),unit_del(b,46)].
+48 rich(father(father(c1))).  [back_unit_del(34),unit_del(b,47)].
+50 $F.  [ur(11,a,46,a,b,10,a),unit_del(a,48)].
+
+============================== end of proof ==========================
+
+============================== STATISTICS ============================
+
+Given=29. Generated=50. Kept=43. proofs=1.
+Usable=19. Sos=13. Demods=9. Limbo=0, Disabled=16. Hints=0.
+Weight_deleted=0. Literals_deleted=0.
+Forward_subsumed=6. Back_subsumed=8.
+Sos_limit_deleted=0. Sos_displaced=0. Sos_removed=0.
+New_demodulators=9 (0 lex), Back_demodulated=0. Back_unit_deleted=3.
+Demod_attempts=431. Demod_rewrites=0.
+Res_instance_prunes=0. Para_instance_prunes=0. Basic_paramod_prunes=0.
+Nonunit_fsub_feature_tests=49. Nonunit_bsub_feature_tests=84.
+Megabytes=0.05.
+User_CPU=0.01, System_CPU=0.01, Wall_clock=0.
+
+============================== end of statistics =====================
+
+============================== end of search =========================
+
+THEOREM PROVED
+
+Exiting with 1 proof.
+
+Process 2820 exit (max_proofs) Thu Mar  6 23:14:34 2014

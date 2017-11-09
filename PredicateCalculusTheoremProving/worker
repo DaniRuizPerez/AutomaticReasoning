@@ -1,0 +1,20 @@
+if(Prover9). % Options for Prover9
+  assign(max_seconds, 60).
+end_if.
+
+if(Mace4).   % Options for Mace4
+  assign(max_seconds, 60).
+end_if.
+
+formulas(assumptions).
+
+works(w,e1) -> works(boss(w),e1).
+(works(w,e1) & rival(e1,e2)) -> -likes(w,e2).
+works(w,e1) & all x likes(boss(w),x).
+all x rival(e1,x).
+
+end_of_list.
+
+formulas(goals).
+
+end_of_list.

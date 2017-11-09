@@ -1,0 +1,112 @@
+============================== Prover9 ===============================
+Prover9 (32) version Oct-2007, Oct 2007.
+Process 3432 was started by UserLemar on Lemar-PC,
+Thu Mar  6 23:13:53 2014
+The command was "bin/prover9 -f equivalence.txt".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+% Reading from file equivalence.txt
+
+
+formulas(assumptions).
+(all x all y all z eq(x,y)) & eq(y,z) -> eq(x,z).
+(all x all y eq(x,y)) -> eq(y,x).
+-eq(x,y) & (eq(x,z) | eq(y,z)).
+end_of_list.
+
+formulas(goals).
+end_of_list.
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 (all x all y all z eq(x,y)) & eq(y,z) -> eq(x,z) # label(non_clause).  [assumption].
+2 (all x all y eq(x,y)) -> eq(y,x) # label(non_clause).  [assumption].
+3 -eq(x,y) & (eq(x,z) | eq(y,z)) # label(non_clause).  [assumption].
+
+============================== end of process non-clausal formulas ===
+
+============================== PROCESS INITIAL CLAUSES ===============
+
+% Clauses before input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+-eq(f1(x,y,z),f2(x,y,z)) | -eq(x,y) | eq(z,y).  [clausify(1)].
+-eq(f4(x,y),f5(x,y)) | eq(x,y).  [clausify(2)].
+-eq(x,y).  [clausify(3)].
+eq(x,y) | eq(z,y).  [clausify(3)].
+end_of_list.
+
+formulas(demodulators).
+end_of_list.
+
+============================== PREDICATE ELIMINATION =================
+
+No predicates eliminated.
+
+============================== end predicate elimination =============
+
+Auto_denials:  (non-Horn, no changes).
+
+Term ordering decisions:
+Predicate symbol precedence:  predicate_order([ eq ]).
+Function symbol precedence:  function_order([ f4, f5, f1, f2 ]).
+After inverse_order:  (no changes).
+Unfolding symbols: (none).
+
+Auto_inference settings:
+  % set(binary_resolution).  % (non-Horn)
+  % set(positive_inference). % (non-Horn)
+    % set(positive_inference) -> assign(literal_selection, max_negative).
+  % set(neg_ur_resolution).  % (non-Horn, less than 100 clauses)
+
+Auto_process settings:
+  % set(factor).  % (non-Horn)
+  % set(back_unit_deletion).  % (non-Horn)
+    % set(back_unit_deletion) -> set(unit_deletion).
+
+============================== PROOF =================================
+
+% Proof 1 at 0.00 (+ 0.03) seconds.
+% Length of proof is 4.
+% Level of proof is 2.
+% Maximum clause weight is 3.
+% Given clauses 0.
+
+3 -eq(x,y) & (eq(x,z) | eq(y,z)) # label(non_clause).  [assumption].
+6 -eq(x,y).  [clausify(3)].
+7 eq(x,y) | eq(z,y).  [clausify(3)].
+8 $F.  [copy(7),unit_del(a,6),unit_del(b,6)].
+
+============================== end of proof ==========================
+
+============================== STATISTICS ============================
+
+Given=0. Generated=4. Kept=3. proofs=1.
+Usable=0. Sos=0. Demods=0. Limbo=3, Disabled=4. Hints=0.
+Weight_deleted=0. Literals_deleted=0.
+Forward_subsumed=0. Back_subsumed=0.
+Sos_limit_deleted=0. Sos_displaced=0. Sos_removed=0.
+New_demodulators=0 (0 lex), Back_demodulated=0. Back_unit_deleted=0.
+Demod_attempts=0. Demod_rewrites=0.
+Res_instance_prunes=0. Para_instance_prunes=0. Basic_paramod_prunes=0.
+Nonunit_fsub_feature_tests=0. Nonunit_bsub_feature_tests=0.
+Megabytes=0.02.
+User_CPU=0.00, System_CPU=0.03, Wall_clock=0.
+
+============================== end of statistics =====================
+
+============================== end of search =========================
+
+THEOREM PROVED
+
+Exiting with 1 proof.
+
+Process 3432 exit (max_proofs) Thu Mar  6 23:13:53 2014

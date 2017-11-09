@@ -1,7 +1,7 @@
 Hitori Puzzle Solver
 ============
 
-This Hitori Puzzle Solver is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It transforms the Hitori puzzle into a set of CNF boolean clauses based on the rules of the game, calls a SAT solver and creates the solution.
+This Hitori Puzzle Solver is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It transforms a simplified version of the Hitori puzzle into a set of CNF boolean clauses based on the rules of the game, calls a propositional satisfiability (SAT) solver and creates the solution.
 
 				Input:						Solution:
 			5  3  1  9  7  3  7  6  5			5  *  1  9  7  3  *  6  * 
@@ -22,7 +22,7 @@ Hitori is played with a grid of squares or cells, with each cell initially conta
 
 ## Problem solving
 
-We basically transform the problem into 3-SAT (well known NP-Complete problem) and then use a SAT solver called picosat to solve it.
+We basically transform the problem into CNF as a set of clauses and then use a SAT solver called picosat to solve it. We generate an auxiliary file using DIMACS CNF format (where every clause line ends with a 0).
 - For the first condition (no same number in the same row or column), we add a clause with pairs of variables and then a 0. For example, if the first row of the puzzle matrix is:
 ```
 3  5  5  1  6  3 

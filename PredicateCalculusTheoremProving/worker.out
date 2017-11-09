@@ -1,0 +1,134 @@
+============================== Prover9 ===============================
+Prover9 (32) version Oct-2007, Oct 2007.
+Process 3244 was started by UserLemar on Lemar-PC,
+Thu Mar  6 23:16:21 2014
+The command was "bin/prover9 -f worker.txt".
+============================== end of head ===========================
+
+============================== INPUT =================================
+
+% Reading from file worker.txt
+
+if(Prover9).
+% Conditional input included.
+assign(max_seconds,60).
+end_if.
+if(Mace4).
+% Conditional input omitted.
+end_if.
+
+formulas(assumptions).
+works(w,e1) -> works(boss(w),e1).
+works(w,e1) & rival(e1,e2) -> -likes(w,e2).
+works(w,e1) & (all x likes(boss(w),x)).
+(all x rival(e1,x)).
+end_of_list.
+
+formulas(goals).
+end_of_list.
+
+============================== end of input ==========================
+
+============================== PROCESS NON-CLAUSAL FORMULAS ==========
+
+% Formulas that are not ordinary clauses:
+1 works(w,e1) -> works(boss(w),e1) # label(non_clause).  [assumption].
+2 works(w,e1) & rival(e1,e2) -> -likes(w,e2) # label(non_clause).  [assumption].
+3 works(w,e1) & (all x likes(boss(w),x)) # label(non_clause).  [assumption].
+4 (all x rival(e1,x)) # label(non_clause).  [assumption].
+
+============================== end of process non-clausal formulas ===
+
+============================== PROCESS INITIAL CLAUSES ===============
+
+% Clauses before input processing:
+
+formulas(usable).
+end_of_list.
+
+formulas(sos).
+-works(x,e1) | works(boss(x),e1).  [clausify(1)].
+-works(x,e1) | -rival(e1,e2) | -likes(x,e2).  [clausify(2)].
+works(x,e1).  [clausify(3)].
+likes(boss(x),y).  [clausify(3)].
+rival(e1,x).  [clausify(4)].
+end_of_list.
+
+formulas(demodulators).
+end_of_list.
+
+============================== PREDICATE ELIMINATION =================
+
+Eliminating rival/2
+5 rival(e1,x).  [clausify(4)].
+6 -works(x,e1) | -rival(e1,e2) | -likes(x,e2).  [clausify(2)].
+Derived: -works(x,e1) | -likes(x,e2).  [resolve(5,a,6,b)].
+
+Eliminating likes/2
+7 -works(x,e1) | -likes(x,e2).  [resolve(5,a,6,b)].
+8 likes(boss(x),y).  [clausify(3)].
+Derived: -works(boss(x),e1).  [resolve(7,b,8,a)].
+
+============================== end predicate elimination =============
+
+Auto_denials:  (no changes).
+
+Term ordering decisions:
+Predicate symbol precedence:  predicate_order([ works ]).
+Function symbol precedence:  function_order([ e1, boss ]).
+After inverse_order:  (no changes).
+Unfolding symbols: (none).
+
+Auto_inference settings:
+  % set(neg_binary_resolution).  % (HNE depth_diff=-1)
+  % clear(ordered_res).  % (HNE depth_diff=-1)
+  % set(ur_resolution).  % (HNE depth_diff=-1)
+    % set(ur_resolution) -> set(pos_ur_resolution).
+    % set(ur_resolution) -> set(neg_ur_resolution).
+
+Auto_process settings:  (no changes).
+
+============================== PROOF =================================
+
+% Proof 1 at 0.00 (+ 0.03) seconds.
+% Length of proof is 10.
+% Level of proof is 4.
+% Maximum clause weight is 4.
+% Given clauses 0.
+
+2 works(w,e1) & rival(e1,e2) -> -likes(w,e2) # label(non_clause).  [assumption].
+3 works(w,e1) & (all x likes(boss(w),x)) # label(non_clause).  [assumption].
+4 (all x rival(e1,x)) # label(non_clause).  [assumption].
+5 rival(e1,x).  [clausify(4)].
+6 -works(x,e1) | -rival(e1,e2) | -likes(x,e2).  [clausify(2)].
+7 -works(x,e1) | -likes(x,e2).  [resolve(5,a,6,b)].
+8 likes(boss(x),y).  [clausify(3)].
+10 works(x,e1).  [clausify(3)].
+11 -works(boss(x),e1).  [resolve(7,b,8,a)].
+12 $F.  [resolve(11,a,10,a)].
+
+============================== end of proof ==========================
+
+============================== STATISTICS ============================
+
+Given=0. Generated=3. Kept=3. proofs=1.
+Usable=0. Sos=0. Demods=0. Limbo=2, Disabled=7. Hints=0.
+Weight_deleted=0. Literals_deleted=0.
+Forward_subsumed=0. Back_subsumed=0.
+Sos_limit_deleted=0. Sos_displaced=0. Sos_removed=0.
+New_demodulators=0 (0 lex), Back_demodulated=0. Back_unit_deleted=0.
+Demod_attempts=0. Demod_rewrites=0.
+Res_instance_prunes=0. Para_instance_prunes=0. Basic_paramod_prunes=0.
+Nonunit_fsub_feature_tests=0. Nonunit_bsub_feature_tests=0.
+Megabytes=0.01.
+User_CPU=0.00, System_CPU=0.03, Wall_clock=0.
+
+============================== end of statistics =====================
+
+============================== end of search =========================
+
+THEOREM PROVED
+
+Exiting with 1 proof.
+
+Process 3244 exit (max_proofs) Thu Mar  6 23:16:21 2014

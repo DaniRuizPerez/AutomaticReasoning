@@ -1,0 +1,26 @@
+set(ignore_option_dependencies). % GUI handles dependencies
+
+if(Prover9). % Options for Prover9
+  assign(max_seconds, 60).
+end_if.
+
+if(Mace4).   % Options for Mace4
+  assign(max_seconds, 60).
+end_if.
+
+formulas(assumptions).
+
+all x (shark(x) -> -herb(x)).
+exists x (fish(x)).
+all x all y (shark(x) & fish(y) -> eats(x,y)).
+all x (fish(x) -> animal(x)).
+all x all y (herb(x) & animal(y) -> -eats(x,y)).
+
+end_of_list.
+
+formulas(goals).
+
+all x (shark(x) -> -herb(x)).
+
+end_of_list.
+
