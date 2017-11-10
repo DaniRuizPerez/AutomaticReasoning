@@ -1,7 +1,7 @@
 Answer Set Proramming Canon composer
 ============
 
-The ASP Canon Composer is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It is an automated canon composer using Answer Set Programming that takes into account many melodic restrictions and preferences.
+The ASP Canon Composer is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It is an automated canon composer with multiple voices using Answer Set Programming that takes into account many melodic restrictions and preferences. It uses the tools gringo, clasp, python and lilypond.
 
 
 ## Canon and melodic restrictions and preferences
@@ -15,7 +15,7 @@ A canon is a technique for composing musical pieces with two or more simultaneou
 - The delay will be specified
 
 It will have the following harmonic restrictions:
-- notes played by the two voices can't from a dissonance. The following combinations are forbiden: c-d, d-e, e-f, f-g, g-a, a-b, b-c 
+- notes played by the voices can't from a dissonance. The following combinations are forbiden: c-d, d-e, e-f, f-g, g-a, a-b, b-c 
 - Leader and follower can't perform two consecutive  fifth intervals (when the distance between the lower higher pitch is 5)
 
 And the following melodic preferences (if posible). Degrees for preferences can be varied for generating different solutions:
@@ -45,6 +45,24 @@ c' d' e' c' e' f' g' g'
 -  -  -  -  c' d' e' c' 
 ```
 Also, the software Lilypond can be used to generate a music file that can be listened to.
+
+
+## How to execute
+
+The following software is needed:
+- Python
+- clasp
+- gringo
+- lilypond (optional)
+
+The pythong file canon.py can be executed with the following commands:
+
+	-v x : Determine x number of voices
+	-i file : To stablish the base file for the canon
+	-p file : To stablish the preference file
+	-l : To stablish if Lilypond should be called to generate the audio file
+	-h : Shows help
+As default, input = input.txt and preferences = preferences1.txt"""
 
 
 ## Contact
