@@ -1,0 +1,20 @@
+%defino unisono
+%Las dos voces tocando la misma nota
+unison(T) :- play(T,V,N), play(T,V2,N),V != V2.
+#minimize { unison(T) @ 10}.
+
+%defino repeat
+%Evitar tocar notas repetidas
+repeat(T,T2) :- play(T,V,N),play(T2,V,N), #abs(T-T2) != 1.
+#minimize {repeat(T,T2) @ 8}.
+
+%defino jump
+%Mejor que haya pequeños saltos melódicos
+jump(T) :- play(T,V,N), play(T+1,V,M), #abs(N-M) <= 7.
+#maximize{jump(T) @ 9}.
+
+%defino inversion
+%El follower toca notas mas "pequeñas" que el leader
+inversion(T) :- play(T,V,N) , play(T,V2,M), N > M, V>V2.
+#minimize {inversion(T) @ 1}. 
+

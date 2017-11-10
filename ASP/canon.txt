@@ -1,0 +1,32 @@
+#domain time (T).
+#domain time (T2).
+#domain followerTime1(FT1).
+#domain voice(V).
+#domain voice(V2).
+#domain note(N).
+#domain note(M).
+#domain note(Z).
+#domain note(X).
+#hide.
+#show play/3.
+
+time(0..duration-1).
+followerTime1(wait..duration-1).
+voice(1..2).
+note(1..15).
+
+%genera las notas de cada voz
+1 {play(T,1,W) : note(W)}1. 
+1 {play(FT1,2,W) : note(W)}1. 
+
+%como la voz 1 y la 2 tienen que ser iguales, obligo a que la nota
+%que se toque en el tiempo t de la voz 2 sea el mismo al de la 1 y viceversa
+play(T+wait,2,N) :- play(T,1,N), T+wait<duration.
+
+%defino disonancia y lo prohibo
+disonance(T) :- play(T,V,N) , play(T,V2,M), V != V2 ,#mod(#mod(#abs(N-M),7),5) == 1.
+:- disonance(T).
+
+%defino intervalo de quinta y prohibo dos seguidos distintos
+fifth_interval(T,N,M) :- play(T,V,N), play(T,V2,M) ,V != V2, #mod(#abs(N-M),4) == 0.
+:- fifth_interval(T,N,M) , fifth_interval(T+1,Z,X).
