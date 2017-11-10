@@ -9,24 +9,24 @@ The ASP Canon Composer is one of the projects that I developed for the Knowledge
 A canon is a technique for composing musical pieces with two or more simultaneous voices or melodies (polyphony). In a canon, an initial melody (called the leader or dux) is imitated by the other voices (called the followers or comes) that enter into play after a given duration or delay
 
 - Restricted to the C major tonality
-- 15 pitches from from g to g'' allowed
-- All notes will have the same douration (quarter notes)
+- 15 pitches from g to g'' allowed
+- All notes will have the same duration (quarter notes)
 - 2 voices simple canon (leader and follower)
 - The delay will be specified
 
 It will have the following harmonic restrictions:
-- notes played by the voices can't from a dissonance. The following combinations are forbiden: c-d, d-e, e-f, f-g, g-a, a-b, b-c 
+- notes played by the voices can't from a dissonance. The following combinations are forbidden: c-d, d-e, e-f, f-g, g-a, a-b, b-c 
 - Leader and follower can't perform two consecutive  fifth intervals (when the distance between the lower higher pitch is 5)
 
-And the following melodic preferences (if posible). Degrees for preferences can be varied for generating different solutions:
+And the following melodic preferences (if possible). Degrees for preferences can be varied for generating different solutions:
 - Avoid unisons (both voices playing same note)
 - Avoid repeating the last note
-- Smaller melodic jumps are prefered
+- Smaller melodic jumps are preferred
 - The follower should play a lower pitch than the leader
 
 ## Input
 
-First line of the input file is the length and the second line the delay for the second voice. Then a partial description of each voice with fixed notes and the composer will fill in the blanks (it can be completelly blank). Example:
+The first line of the input file is the length and the second line the delay for the second voice. Then a partial description of each voice with fixed notes and the composer will fill in the blanks (it can be completely blank). Example:
 
 ```
 8
@@ -55,13 +55,13 @@ The following software is needed:
 - gringo
 - lilypond (optional)
 
-The pythong file canon.py can be executed with the following commands:
+The python file canon.py can be executed with the following commands:
 
-	-v x : Determine x number of voices
-	-i file : To stablish the base file for the canon
-	-p file : To stablish the preference file
-	-l : To stablish if Lilypond should be called to generate the audio file
-	-h : Shows help
+    -v x : Determine x number of voices
+    -i file : To stablish the base file for the canon
+    -p file : To stablish the preference file
+    -l : To stablish if Lilypond should be called to generate the audio file
+    -h : Shows help
 As default, input = input.txt and preferences = preferences1.txt"""
 
 
