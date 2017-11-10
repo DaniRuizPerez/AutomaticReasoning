@@ -1,7 +1,7 @@
 Answer Set Proramming Canon composer
 ============
 
-The ASP Canon Composer is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It is an automated canon composer with multiple voices using Answer Set Programming that takes into account many melodic restrictions and preferences. It uses the tools gringo, clasp, python and lilypond.
+The ASP Canon Composer is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It is an automated canon composer with multiple voices using Answer Set Programming that takes into account many melodic restrictions and preferences. It uses the tools gringo, clasp, python and lilypond. A short example audio file is provided, created with one of the preference files provided.
 
 
 ## Canon and melodic restrictions and preferences
