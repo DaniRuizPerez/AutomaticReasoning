@@ -1,7 +1,3 @@
-Isidro Alfaro Barbará
-Daniel Ruiz Pérez
-
-
 ORIGINAL:
 
 	?{winner=kooth}.
