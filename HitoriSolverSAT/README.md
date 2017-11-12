@@ -44,7 +44,7 @@ After we do that for the whole matrix, we call the SAT solver and if it is satis
 
 The project was developed using the following technology:
 
-- python
+- Python
 - picosat
 
 In order to execute different puzzles, change this line and reference the desired file: f = open("9x9.txt").
