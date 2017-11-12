@@ -1,0 +1,61 @@
+smodels version 2.34. Reading...done
+Answer: 1
+Stable Model: play(sheldon,paper) play(kooth,spock) pa(r1,play(kooth,scissors),di_(2,3)) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 2
+Stable Model: play(sheldon,paper) play(kooth,rock) pa(r1,play(kooth,scissors),di_(2,3)) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 3
+Stable Model: play(sheldon,paper) play(kooth,scissors) pa(r1,play(kooth,scissors),di_(2,3)) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 4
+Stable Model: play(sheldon,paper) play(kooth,paper) tie(true) pa(r1,play(kooth,scissors),di_(2,3)) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 5
+Stable Model: play(sheldon,paper) play(kooth,lizard) pa(r1,play(kooth,scissors),di_(2,3)) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 6
+Stable Model: play(sheldon,rock) play(kooth,paper) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 7
+Stable Model: play(sheldon,spock) play(kooth,paper) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 8
+Stable Model: play(sheldon,lizard) play(kooth,paper) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 9
+Stable Model: play(sheldon,scissors) play(kooth,paper) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 10
+Stable Model: play(sheldon,lizard) play(kooth,lizard) tie(true) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 11
+Stable Model: play(sheldon,lizard) play(kooth,rock) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 12
+Stable Model: play(sheldon,lizard) play(kooth,scissors) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 13
+Stable Model: play(sheldon,lizard) play(kooth,spock) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 14
+Stable Model: play(sheldon,scissors) play(kooth,spock) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 15
+Stable Model: play(sheldon,spock) play(kooth,spock) tie(true) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 16
+Stable Model: play(sheldon,rock) play(kooth,spock) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 17
+Stable Model: play(sheldon,scissors) play(kooth,lizard) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 18
+Stable Model: play(sheldon,scissors) play(kooth,rock) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 19
+Stable Model: play(sheldon,scissors) play(kooth,scissors) tie(true) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 20
+Stable Model: play(sheldon,spock) play(kooth,lizard) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 21
+Stable Model: play(sheldon,spock) play(kooth,rock) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 22
+Stable Model: play(sheldon,spock) play(kooth,scissors) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 23
+Stable Model: play(sheldon,rock) play(kooth,rock) tie(true) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 24
+Stable Model: play(sheldon,rock) play(kooth,scissors) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+Answer: 25
+Stable Model: play(sheldon,rock) play(kooth,lizard) pd(r,play(sheldon,spock)) pd(r,play(sheldon,lizard)) pd(r,play(sheldon,rock)) pd(r,play(sheldon,scissors)) pd(r,play(sheldon,paper)) pd(r1,play(kooth,spock)) pd(r1,play(kooth,lizard)) pd(r1,play(kooth,rock)) pd(r1,play(kooth,scissors)) pd(r1,play(kooth,paper)) 
+False
+Duration: 0.000
+Number of choice points: 24
+Number of wrong choices: 24
+Number of atoms: 47
+Number of rules: 90
+Number of picked atoms: 281
+Number of forced atoms: 6
+Number of truth assignments: 994
+Size of searchspace (removed): 10 (0)

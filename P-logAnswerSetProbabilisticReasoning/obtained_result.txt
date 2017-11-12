@@ -1,0 +1,83 @@
+Isidro Alfaro Barbará
+Daniel Ruiz Pérez
+
+
+ORIGINAL:
+
+	?{winner=kooth}.
+
+		Syntax Parse Succeed
+		Smodels computation time:  0.000
+		Answer
+		winner=kooth probability: 0.4 0.4
+		Probability Computing Time:0
+
+	?{winner=kooth}|obs(play(sheldon)=rock).
+
+		Syntax Parse Succeed
+		Smodels computation time:  0.000
+		Answer
+		winner=kooth probability: 0.4 0.4
+		Probability Computing Time:0
+
+	?{pscissors}.
+
+		Syntax Parse Succeed
+		Smodels computation time:  0.000
+		Answer
+		pscissors=true probability: 0.36 0.36
+		Probability Computing Time:0
+
+	?{tie}.
+
+		Syntax Parse Succeed
+		Smodels computation time:  0.000
+		Answer
+		tie=true probability: 0.2 0.2
+		Probability Computing Time:0
+
+
+VARIANT
+
+	?{winner=kooth}.
+
+		Syntax Parse Succeed
+		Smodels computation time:  0.000
+		Answer
+		winner=kooth probability: 0.47 0.47
+		Probability Computing Time:0
+
+	?{winner=kooth}|obs(play(sheldon)=rock).
+
+		Syntax Parse Succeed
+		Smodels computation time:  0.000
+		Answer
+		winner=kooth probability: 0.4 0.4
+		Probability Computing Time:0
+
+	?{pscissors}.
+
+		Syntax Parse Succeed
+		Smodels computation time:  0.004
+		Answer
+		pscissors=true probability: 0.453333 0.453333
+		Probability Computing Time:0
+
+	?{tie}.
+
+		Syntax Parse Succeed
+		Smodels computation time:  0.000
+		Answer
+		tie=true probability: 0.176667 0.176667
+		Probability Computing Time:0
+
+
+
+
+
+
+
+
+
+
+

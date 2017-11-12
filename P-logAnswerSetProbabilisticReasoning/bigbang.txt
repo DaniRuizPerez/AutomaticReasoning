@@ -1,0 +1,31 @@
+moves = {paper, scissors, rock, lizard, spock}.
+players = {sheldon, kooth}.
+#domain players(P1).
+#domain players(P2).
+#domain moves(X).
+tie : boolean.
+play:players -> moves.
+
+[r] random(play(sheldon)).
+[r1] random(play(kooth)).
+
+defeat(paper,rock).
+defeat(paper,spock).
+defeat(scissors,paper).
+defeat(scissors,lizard).
+defeat(rock,lizard).
+defeat(rock,scissors).
+defeat(lizard,spock).
+defeat(lizard,paper).
+defeat(spock,scissors).
+defeat(spock,rock).
+
+winner=P1 :- play(P1)=X,play(P2)=Y,defeat(X,Y).
+tie :- play(P1)=X,play(P2)=X,P1<>P2.
+
+pscissors :- play(P1)=scissors.
+
+%?{winner=kooth}.
+%?{winner=kooth}|obs(play(sheldon)=rock).
+%?{pscissors}.
+%?{tie}.

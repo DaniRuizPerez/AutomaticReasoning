@@ -1,0 +1,35 @@
+moves(paper).
+moves(scissors).
+moves(rock).
+moves(lizard).
+moves(spock).
+players(sheldon).
+players(kooth).
+#domain players(P1).
+#domain players(P2).
+#domain moves(X).
+1{play(sheldon,X_):moves(X_)}1:-not intervene(play(sheldon)).
+pd(r,play(sheldon,X_)):-not intervene(play(sheldon)),moves(X_).
+show play(sheldon,X_).
+1{play(kooth,X_):moves(X_)}1:-not intervene(play(kooth)).
+pd(r1,play(kooth,X_)):-not intervene(play(kooth)),moves(X_).
+show play(kooth,X_).
+defeat(paper,rock,true).
+defeat(paper,spock,true).
+defeat(scissors,paper,true).
+defeat(scissors,lizard,true).
+defeat(rock,lizard,true).
+defeat(rock,scissors,true).
+defeat(lizard,spock,true).
+defeat(lizard,paper,true).
+defeat(spock,scissors,true).
+defeat(spock,rock,true).
+winner(P1):-play(P1,X),play(P2,Y),defeat(X,Y,true).
+tie(true):-play(P1,X),play(P2,X),neq(P1,P2).
+pscissors(true):-play(P1,scissors).
+pa(r1,play(kooth,scissors),di_(2,3)):-play(sheldon,paper).
+
+hide.
+show pd(X,Y).
+show pa(X,Y,Z).
+show tie(true).
