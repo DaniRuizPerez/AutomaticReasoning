@@ -40,4 +40,4 @@ Contact [Daniel Ruiz Perez](mailto:druiz072@fiu.edu) for requests, bug reports a
 
 ## License
 
-The software in this repository is available under the GNU General Public License, version 3. See the [LICENSE](https://github.com/DaniRuizPerez/TheoryOfComputationImplementations/blob/master/LICENSE) file for more information.
+The software in this repository is available under the GNU General Public License, version 3. See the [LICENSE](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/LICENSE) file for more information.
