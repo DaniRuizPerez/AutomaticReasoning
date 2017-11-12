@@ -1,4 +1,4 @@
-Answer Set Proramming Canon composer
+Automatic Reasoning Projects 
 ============
 
 This is a collection of projets that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). The projects are the following:
@@ -24,4 +24,4 @@ Contact [Daniel Ruiz Perez](mailto:druiz072@fiu.edu) for requests, bug reports a
 
 ## License
 
-The software in this repository is available under the GNU General Public License, version 3. See the [LICENSE](https://github.com/DaniRuizPerez/TheoryOfComputationImplementations/blob/master/LICENSE) file for more information.
+The software in this repository is available under the GNU General Public License, version 3. See the [LICENSE](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/LICENSE) file for more information.
