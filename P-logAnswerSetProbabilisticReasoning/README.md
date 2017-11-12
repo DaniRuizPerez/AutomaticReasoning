@@ -3,7 +3,7 @@ Rock, paper, scissors, lizard, Spock (P-log)
 
 This Probabilistic Reasoning with Answer Sets assignment is one of the projects that I developed for the Knowledge Representation and Automatic Reasoning course in the junior year of my undergrad in computer science at UDC (Spain). It will calculate the probabilities of different things happening on the Big Bang Theory game Rock, paper, scissors, lizard, Spock. 
 
-## Examplanation of the game:
+## Explanation of the game:
 
 The rules of the game are as follows:
 
@@ -18,7 +18,7 @@ The rules of the game are as follows:
 - Spock vaporizes rock
 - Rock crushes scissors
 
-Each of the player play in completely random ways.
+Each of the players plays in completely random ways.
 
 ## Probability calculations
 
@@ -34,7 +34,7 @@ The results can be seen in the first part of the file obtained_result.txt.
 
 ## Anticipation variant
 
-Suppose that Kooth is sometimes quick enough to see Sheldon making the "paper" sign. In fact, 2 of each 3 times, he is able to foresee Sheldon's "paper". In that case, Kooth always marks "scissors". We modeled this variant and recomputed the  probabilities above. The modeled domain can be seen in bigbang_variant.txt.
+Suppose that Kooth is sometimes quick enough to see Sheldon making the "paper" sign. In fact, 2 of each 3 times, he is able to foresee Sheldon's "paper". In that case, Kooth always marks "scissors". We modeled this variant and recomputed the probabilities above. The modeled domain can be seen in bigbang_variant.txt.
 
 The results can be seen in the second part of the file obtained_result.txt.
 
