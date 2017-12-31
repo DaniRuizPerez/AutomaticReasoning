@@ -39,10 +39,6 @@ The last command (make) will generate a file called "search". We have to execute
 - graph
 
 
-
-
-
-
 ## Contact
 
 Contact [Daniel Ruiz Perez](mailto:druiz072@fiu.edu) for requests, bug reports and good jokes.
