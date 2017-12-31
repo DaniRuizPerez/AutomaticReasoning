@@ -4,7 +4,10 @@
 #define LEFT 3
 #define NUM_OPERATORS 4
 
+int N = 3;
+
 typedef struct tState_ {
-  int cells[3][3];
+  int cells[N][N];
   int r,c;
 } tState;
+
