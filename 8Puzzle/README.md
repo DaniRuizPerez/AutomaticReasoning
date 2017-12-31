@@ -1,11 +1,11 @@
-Predicate Calculus Theorem Proving (using Prover9)
+8puzzle solver by heuristic search
 ============
 
 This 8puzzle solver by heuristic search is one of the projects that I developed for the Intelligent Systems course in the sophomore year of my BSc in computer science at UDC (Spain). With the help of some code extracted directly from the Russell&Norvig03's book, my partner and I developed a suitable heuristic and Greedy, BSF, DSF and A* can be used to perform the search.
 
 
 <p align="center">
-<img src="https://github.com/DaniRuizPerez/Pygame/blob/master/ImagesAndUML/8puzzle.png" width="500">
+<img src="https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/8puzzle.png" width="500">
 </p>
 
 
