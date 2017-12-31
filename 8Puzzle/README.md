@@ -12,16 +12,16 @@ This 8puzzle solver by heuristic search is one of the projects that I developed 
 
 ## Code explanation and domain creation
 
-[search.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/search.c) contains the generic code for tree search extracted directly from the Russell&Norvig03's Artificial Intelligence: A Modern Approach book. To construct the corresponding domain, it is necesary to define the funtions specified in the [search.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/search.h) file. The selected heuristic is the taxicab distance (distance in rows plus distance in columns)
+[search.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/search.c) contains the generic code for tree search extracted directly from the Russell&Norvig03's Artificial Intelligence: A Modern Approach book. To construct the corresponding domain, it is necessary to define the functions specified in the [search.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/search.h) file. The selected heuristic is the taxicab distance (distance in rows plus distance in columns)
 
 [8puzzle.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/8puzzle.h) contains the definition of the type tState (description of the state of a problem) and the actions we can execute (UP,DOWN,LEFT,RIGHT). [8puzzle.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/8puzzle.c) contains the implementation for the functions described in [search.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/search.h).
 
-[search.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/search.c) expects the domain definitions from the files domain.h and domain.c (that are not included). An option to change form one domain to another is to copy [8puzzle.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/8puzzle.h) and [8puzzle.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/8puzzle.c) to domain.h and domain.c respectively. With the [Makefile](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/Makefile) we simplify the symbolic link creation process. To stablish a domain, we execute:
+[search.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/search.c) expects the domain definitions from the files domain.h and domain.c (that are not included). An option to change form one domain to another is to copy [8puzzle.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/8puzzle.h) and [8puzzle.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/8puzzle.c) to domain.h and domain.c respectively. With the [Makefile](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/8Puzzle/Makefile) we simplify the symbolic link creation process. To establish a domain, we execute:
 
 ```
 make domain DOM=8puzzle
 ```
-That creates the symbolic link, stablishing 8puzzle as the domain. To compile the program we then just execute
+That creates the symbolic link, establishing 8puzzle as the domain. To compile the program we then just execute
 
 ```
 make
