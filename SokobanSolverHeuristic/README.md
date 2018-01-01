@@ -5,16 +5,16 @@ This sokoban puzzle solver by heuristic search is one of the projects that I dev
 
 
 
-The best heuristic tried was the taxicab distance (distance in rows plus distance in columns). The object of the puzzle is to place the tiles in order by making sliding moves that use the empty space
 
+The best heuristic tried was the taxicab distance (distance in rows plus distance in columns). The objective is to move the player (@=) UP, DOWN, LEFT, and RIGHT to collect the objects (.). The walls (#) can't be moved but the objects ($) can. This is a representation of an example:
 
-									#####
-									#   #####
-									# # $ $ #
-									# ..#   #
-									## . $ ##
-									 #  # @#
-									 #######
+							#####
+							#   #####
+							# # $ $ #
+							# ..#   #
+							## . $ ##
+							 #  # @#
+							 #######
 
 
 
