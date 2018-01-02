@@ -1,12 +1,7 @@
 Sokoban solver by heuristic search
 ============
 
-This sokoban puzzle solver by heuristic search is one of the projects that I developed for the Intelligent Systems course in the sophomore year of my BSc in computer science at UDC (Spain). With the help of some code extracted directly from the Russell&Norvig03's book, my partner and I developed the especific domain and a suitable heuristic. Greedy, BSF, DSF and A* can be used to perform the search. 
-
-
-
-
-The best heuristic tried was the taxicab distance (distance in rows plus distance in columns). The objective is to move the player (@) UP, DOWN, LEFT, and RIGHT to collect the objects (.). The walls (#) can't be moved but the objects ($) can. This is a representation of an example:
+This sokoban puzzle solver by heuristic search is one of the projects that I developed for the Intelligent Systems course in the sophomore year of my BSc in computer science at UDC (Spain). With the help of some code extracted directly from the Russell&Norvig03's book, my partner and I developed the especific domain and a suitable heuristic. Greedy, BSF, DSF and A* can be used to perform the search. The objective is to move the player (@) UP, DOWN, LEFT, and RIGHT to collect the goals (.). The walls (#) can't be moved but the objects ($) can. The selected heuristic is minimum distances to the goals. This is a representation of one game:
 
 							#####
 							#   #####
@@ -15,19 +10,11 @@ The best heuristic tried was the taxicab distance (distance in rows plus distanc
 							## . $ ##
 							 #  # @#
 							 #######
-
-
-
-
-/*Ya que en costes almacenamos las distancias mínimas a las metas de casa posición, 
-	consideramos una heurística basada en esa matriz, tal que la suma de los costes de
-	las posiciones de todas las cajas es el valor de h*/
-
 	
 
 ## Code explanation and domain creation
 
-[search.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/SokobanSolverHeuristic/search.c) contains the generic code for tree search extracted directly from the Russell&Norvig03's Artificial Intelligence: A Modern Approach book. To construct the corresponding domain, it is necessary to define the functions specified in the [search.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/SokobanSolverHeuristic/search.h) file. The selected heuristic is the taxicab distance (distance in rows plus distance in columns)
+[search.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/SokobanSolverHeuristic/search.c) contains the generic code for tree search extracted directly from the Russell&Norvig03's Artificial Intelligence: A Modern Approach book. To construct the corresponding domain, it is necessary to define the functions specified in the [search.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/SokobanSolverHeuristic/search.h) file. The selected heuristic is minimum distances to the goals.
 
 [sokoban.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/SokobanSolverHeuristic/sokoban.h) contains the definition of the type tState (description of the state of a problem) and the actions we can execute (UP,DOWN,LEFT,RIGHT). [sokoban.c](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/SokobanSolverHeuristic/sokoban.c) contains the implementation for the functions described in [search.h](https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/SokobanSolverHeuristic/search.h).
 
@@ -53,10 +40,6 @@ The last command (make) will generate a file called "search". We have to execute
 - a-star
 - tree
 - graph
-
-
-
-
 
 
 ## Contact
