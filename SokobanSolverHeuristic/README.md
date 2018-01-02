@@ -1,12 +1,12 @@
 Sokoban solver by heuristic search
 ============
 
-This sokoban puzzle solver by heuristic search is one of the projects that I developed for the Intelligent Systems course in the sophomore year of my BSc in computer science at UDC (Spain). With the help of some code extracted directly from the Russell&Norvig03's book, my partner and I developed a suitable heuristic and Greedy, BSF, DSF and A* can be used to perform the search. 
+This sokoban puzzle solver by heuristic search is one of the projects that I developed for the Intelligent Systems course in the sophomore year of my BSc in computer science at UDC (Spain). With the help of some code extracted directly from the Russell&Norvig03's book, my partner and I developed the especific domain and a suitable heuristic. Greedy, BSF, DSF and A* can be used to perform the search. 
 
 
 
 
-The best heuristic tried was the taxicab distance (distance in rows plus distance in columns). The objective is to move the player (@=) UP, DOWN, LEFT, and RIGHT to collect the objects (.). The walls (#) can't be moved but the objects ($) can. This is a representation of an example:
+The best heuristic tried was the taxicab distance (distance in rows plus distance in columns). The objective is to move the player (@) UP, DOWN, LEFT, and RIGHT to collect the objects (.). The walls (#) can't be moved but the objects ($) can. This is a representation of an example:
 
 							#####
 							#   #####

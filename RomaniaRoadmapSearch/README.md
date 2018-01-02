@@ -1,7 +1,7 @@
 Romania Roadmap Search
 ============
 
-This Romania roadmap search by heuristic is one of the projects that I developed for the Intelligent Systems course in the sophomore year of my BSc in computer science at UDC (Spain). With the help of some code extracted directly from the Russell&Norvig03's book, my partner and I developed a suitable heuristic and Greedy, BSF, DSF and A* can be used to perform the search. The objective is to find a route to Bucharest from Arad (preferably the shortest). The heuristic used was the straight distance.
+This Romania roadmap search by heuristic is one of the projects that I developed for the Intelligent Systems course in the sophomore year of my BSc in computer science at UDC (Spain). With the help of some code extracted directly from the Russell&Norvig03's book, my partner and I developed the especific domain and a suitable heuristic. Greedy, BSF, DSF and A* can be used to perform the search. The objective is to find a route to Bucharest from Arad (preferably the shortest). The heuristic used was the straight distance.
 
 <p align="center">
 <img src="https://github.com/DaniRuizPerez/AutomaticReasoning/blob/master/RomaniaRoadmapSearch/romania.png" width="700">
