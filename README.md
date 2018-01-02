@@ -1,7 +1,7 @@
 Automatic Reasoning Projects 
 ============
 
-This is a collection of projets that I developed for the Intelligent System and Knowledge Representation and Automatic Reasoning courses in the sophomore and junior year of my undergrad in computer science at UDC (Spain). The projects are the following:
+This is a collection of projets that I developed for the Intelligent System and Knowledge Representation and Automatic Reasoning courses in the sophomore and junior years of my BS in computer science at UDC (Spain). The projects are the following:
 
 
 - **Automated canon composer with multiple voices using Answer Set Programming** that takes into account many melodic restrictions and preferences. It uses the tools gringo, clasp, python and lilypond. A short example audio file is provided, created with one of the preference files provided. Using Python, clasp, gringo and lilypond.
