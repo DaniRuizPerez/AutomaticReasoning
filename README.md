@@ -22,7 +22,7 @@ This is a collection of projets that I developed for the Intelligent System and 
 
 ## Contact
 
-Contact [Daniel Ruiz Perez](mailto:druiz072@fiu.edu) for requests, bug reports and good jokes.
+Contact [Daniel Ruiz Perez](mailto:druiz072@fiu.edu) for requests, bug reports and good jokes. 
 
 
 ## License
